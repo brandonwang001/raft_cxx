@@ -6,5 +6,8 @@ cc_library(
     hdrs = [
         "wal.pb.h",
     ],
+    linkopts = [
+        "-lprotobuf",
+    ],
     visibility = ["//visibility:public"],
 )

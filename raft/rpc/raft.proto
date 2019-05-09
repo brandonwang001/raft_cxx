@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package raft;
+
+message AppendEntriesReq {
+}
+
+message AppendEntriesResp {
+}
+
+service Raft {
+  rpc AppendEntries (AppendEntriesReq) returns (AppendEntriesResp) {}
+}
