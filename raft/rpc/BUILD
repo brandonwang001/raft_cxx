@@ -1,13 +1,13 @@
 cc_library(
     name = "raft_rpc",
     srcs = [
-        "raft.grpc.pb.cc",
+        "raft_rpc.grpc.pb.cc",
     ],
     hdrs = [
-        "raft.grpc.pb.h",
+        "raft_rpc.grpc.pb.h",
     ],
     deps = [
-        "//raft/rpc:raft_proto",
+        "//raft/rpc:raft_rpc_proto",
     ],
     linkopts = [
         "-lgrpc++",
@@ -17,12 +17,12 @@ cc_library(
 )
 
 cc_library(
-    name = "raft_proto",
+    name = "raft_rpc_proto",
     srcs = [
-        "raft.pb.cc",
+        "raft_rpc.pb.cc",
     ],
     hdrs = [
-        "raft.pb.h",
+        "raft_rpc.pb.h",
     ],
     linkopts = [
         "-lprotobuf",

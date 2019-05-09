@@ -6,7 +6,7 @@
 #include <grpcpp/grpcpp.h>
 
 #include "raft/common/error.h"
-#include "raft/rpc/raft.grpc.pb.h"
+#include "raft/rpc/raft_rpc.grpc.pb.h"
 
 namespace raft {
 
