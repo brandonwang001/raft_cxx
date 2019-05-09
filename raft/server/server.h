@@ -1,5 +1,7 @@
 #pragma once
 
+#include <glog/logging.h>
+
 #include <memory>
 #include <string>
 #include <thread>

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <glog/logging.h>
 
 #include "raft/server/server.h"
 
@@ -7,6 +8,7 @@ int main() {
   raft::ServerOptions opts;
   opts.address = address;
   raft::MainServer server(opts);
+  LOG(INFO) << "begin running";
   server.Run();
   return 0;
 }

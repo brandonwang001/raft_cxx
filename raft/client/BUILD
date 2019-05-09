@@ -1,17 +1,17 @@
-cc_binary(
-    name = "server_test",
+cc_library(
+    name = "client",
     srcs = [
-        "main.cc",
+        "client.cc",
+    ],
+    hdrs = [
+        "client.h",
     ],
     deps = [
         "//raft/common:raft_common",
-        "//raft/server:server",
+        "//raft/rpc:raft_rpc",
     ],
     copts = [
         "-std=c++14",
-    ],
-    linkopts = [
-        "-lglog",
     ],
     visibility = ["//visibility:public"],
 )

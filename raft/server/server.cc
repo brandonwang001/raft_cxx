@@ -1,5 +1,7 @@
 #include "server.h"
 
+#include <glog/logging.h>
+
 #include <memory>
 #include <string>
 #include <memory> 
@@ -11,6 +13,7 @@ Error AppendEntriesHandler::AppendEntries(
     grpc::ServerContext* context,
     const AppendEntriesReq* req,
     AppendEntriesResp* rsp) {
+  LOG(INFO) << "process AppendEntries";
   RETURN_OK();
 }
 
